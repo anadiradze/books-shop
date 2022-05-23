@@ -5,16 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="confirmOrder.css" />
+    <link rel="stylesheet" href="confirmOrder2.css" />
   </head>
   <body>
-    <div class="page2">
-      Hello, your order is confirmed, delivery adress is :
-      <span class="page2" id="result"></span>
+    <main class="maindiv">
+      <h1> Hello, your order is confirmed </h1>
+        <div class="page2">
+        <div class="Pdiv" >adress: <p id="adress"></p> </div> 
+        <div class="Pdiv" >house:  <p id="house"></p></div>
+        <div class="Pdiv" >flat:  <p id="flat"></p></div>
+        <div class="Pdiv" >customer:  <p id="fname"></p> <p id="lname"> </p></div>
     </div>
+    </main>
     <script>
-      document.getElementById("result").textContent =
+      document.getElementById("adress").textContent =
         localStorage.getItem("textvalue");
+        document.getElementById("house").textContent =
+        localStorage.getItem("textvalue1");
+        document.getElementById("flat").textContent =
+        localStorage.getItem("textvalue2");
+        document.getElementById("fname").textContent =
+        localStorage.getItem("textvalue3");
+        document.getElementById("lname").textContent =
+        localStorage.getItem("textvalue4");
     </script>
   </body>
 </html>
