@@ -34,7 +34,16 @@ for (let i = 0; i < formInputs.length; i++) {
     }
     function passvalue(){
       const street = document.getElementById("street").value
+      const house = document.getElementById("house").value
+      const flat = document.getElementById("flat").value
+      const fname=document.getElementById("fname").value
+      const lname=document.getElementById("lname").value
       localStorage.setItem("textvalue",street)
+      localStorage.setItem("textvalue1",house)
+      localStorage.setItem("textvalue2",flat)
+      localStorage.setItem("textvalue3",fname)
+      localStorage.setItem("textvalue4",lname)
+
       return false
     }
     passvalue()
@@ -43,3 +52,4 @@ for (let i = 0; i < formInputs.length; i++) {
 function buttonUpdate() {
   document.getElementById("completeBtn").disabled = !form.checkValidity();
 }
+
