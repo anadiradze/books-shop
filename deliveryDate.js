@@ -10,7 +10,6 @@ if (month < 10) {
 const year = date.getFullYear();
 const minDate = `${year}-${month}-${day}`;
 document.getElementById("delivery").setAttribute("min", minDate);
-console.log(minDate);
 
 let checks = document.querySelectorAll(".maxTwoCheck");
 let maximumChecks = 2;
