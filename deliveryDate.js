@@ -25,20 +25,21 @@ const formInputs = document.getElementsByClassName("allInputs");
 const formSpans = document.getElementsByClassName("form__span");
 for (let i = 0; i < formInputs.length; i++) {
   document.getElementById("completeBtn").addEventListener("click",()=>{
+    formInputs[i].addEventListener("onchange", () => {
+      buttonUpdate();
+    });
     formInputs[i].classList.add("inputValidation");
     if(i<5){
       formSpans[i].classList.add("spanValidation");
     }
-    document.getElementById("completeBtn").disabled = !form.checkValidity();
     function passvalue(){
       const street = document.getElementById("street").value
-      const house =document.getElementById("house").value
-      const flat =document.getElementById("flat").value
       localStorage.setItem("textvalue",street)
       return false
     }
     passvalue()
   });
 }
-
-
+function buttonUpdate() {
+  document.getElementById("completeBtn").disabled = !form.checkValidity();
+}
