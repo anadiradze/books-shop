@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap"); /* for headings */
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Noto+Sans&display=swap"); /* for paragraps */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.hovered {
+  position: relative;
+  top: 0;
+  transition: top ease 0.2s;
+}
+.hovered:hover,
+.hovered:active {
+  top: -0.7rem;
+  cursor: pointer;
+}
+.hoveredButton {
+  position: relative;
+  top: 0;
+  transition: top ease 0.2s;
+}
+.hoveredButton:hover,
+.hoveredButton:active {
+  background-color: #f1cdb3;
+  top: -0.7rem;
+  cursor: pointer;
+}
+.flexBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section1 {
+  margin: 0 auto;
+  width: 1280px;
+  background-color: #f6eee0;
+  background-image: linear-gradient(
+    175deg,
+    #f6eee0 70%,
+    #ffffff calc(70% + 2px)
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.header {
+  width: 930px;
+  margin: 0 auto;
+}
+.navUl {
+  gap: 4rem;
+}
+.cart {
+  margin-left: 3rem;
+}
+.navA {
+  color: #003161;
+  font-family: "Noto Sans", sans-serif;
+}
+.section1Content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 1000px;
+}
+.section1Text {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  gap: 2.5rem;
+  margin-top: -4.5rem;
+}
+.section1Image {
+  width: 45rem;
+}
+.h1 {
+  font-family: "Comfortaa", cursive;
+  font-size: 3rem;
+  color: #003161;
+}
+.section1P {
+  font-family: "Noto Sans", sans-serif;
+  color: #a47551;
+}
+
+.section1Button {
+  background-image: linear-gradient(-180deg, #ff7e31, #e62c03);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #ffffff;
+  cursor: pointer;
+  height: 3rem;
+  padding: 0 20px;
+  text-align: center;
+  width: auto;
+  border: 0;
+  transition: box-shadow 0.2s;
+}
+
+.button-42:hover {
+  box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+}
+
+/* SECTION 2 */
+.section2 {
+  margin: 0 auto;
+  width: 1280px;
+  background-color: #ede6db;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 10px;
+}
+.box {
+  width: 95%;
+  background-color: white;
+  margin: 20px 13px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+.insideBox {
+  width: 90%;
+  height: 90%;
+  border-radius: 8px;
+  border: 3px dashed #ad8b73;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin: 2rem;
+}
+.box2 {
+  background-color: #e3caa5;
+}
+.shadow1,
+.shadow2 {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;
+}
+.Section2H2 {
+  font-family: "Comfortaa", cursive;
+  font-size: 2rem;
+  color: #417d7a;
+  margin-top: 1rem;
+  font-weight: bold;
+  grid-column: 1/3;
+  text-align: center;
+}
+
+/* Functionality */
+
+.bookDiv {
+  margin: 2rem;
+  display: flex;
+  background-color: rgb(250, 238, 231);
+  border-radius: 1rem;
+  height: 300px;
+}
+.imageLink {
+  width: 170px;
+  padding: 2rem;
+  max-height: 250px;
+}
+.bookDivContent {
+  padding: 1rem 0;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.horizontal-scroll-wrapper {
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.bookDivText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+}
+.Section2H3 {
+  font-family: "Comfortaa", cursive;
+  font-size: 1.4rem;
+  color: #417d7a;
+  font-weight: bold;
+}
+.bookDivH4 {
+  font-family: "Comfortaa", cursive;
+  font-size: 1.3rem;
+  color: #1a3c40;
+  margin-top: 1rem;
+}
+.h5Authors {
+  font-family: "Comfortaa", cursive;
+  font-size: 1.3rem;
+  color: #1a3c40;
+  margin-top: 1rem;
+}
+.bookDivH4:before {
+  content: "price: $";
+}
+
+.bookDivButtonDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.addToBag {
+  background-color: #417d7a;
+  border-radius: 6px;
+  color: #ffffff;
+  cursor: pointer;
+  height: 3rem;
+  padding: 0 20px;
+  text-align: center;
+  width: 12.5rem;
+  margin-bottom: 2rem;
+}
+.showMore {
+  font-family: "Comfortaa", cursive;
+  font-weight: bolder;
+  color: #a64b2a;
+}
+/* SCROLL */
+.insideBox::-webkit-scrollbar {
+  width: 2em;
+}
+.insideBox::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.insideBox::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #4ca1a3, #c6b4ce);
+  border-radius: 10px;
+}
+
+/* POPUP */
+.popup {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 350px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.flexpopuptext {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.removeSpan {
+  margin-right: 10px;
+}
+.cartBoxDiv {
+  width: 100%;
+  min-height: 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.3fr 0.6fr;
+  grid-auto-columns: auto;
+  align-items: flex-start;
+}
+
+/* IN CART */
+.CartDivTextinCart {
+  border-radius: 8px;
+  border: 3px dashed #ad8b73;
+  margin: 2rem;
+}
+.addToBagS2 {
+  background-color: #417d7a;
+  border-radius: 6px;
+  color: #ffffff;
+  cursor: pointer;
+  height: 3rem;
+  padding: 0 20px;
+  text-align: center;
+  width: 12.5rem;
+}
+.buttonAndAmount {
+  display: flex;
+  gap: 3px;
+}
+.amount {
+  background-color: transparent;
+  border: 2px solid;
+  border-color: white;
+  width: auto;
+  text-align: center;
+  padding: 4px;
+}
+.flexButton {
+  grid-row-start: 100;
+  grid-column: 2/3;
+  width: 35%;
+  text-align: center;
+  padding-top: 10px;
+  place-self: center;
+}
+.totalPriceDiv {
+  grid-row-start: 100;
+  grid-column: 1/2;
+  width: 35%;
+  text-align: center;
+  padding-top: 10px;
+  place-self: center;
+}
+.confirmOrderAnchor {
+  text-decoration: none;
+  color: white;
+}

@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap"); /* for headings */
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Noto+Sans&display=swap"); /* for paragraps */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: #0f2027; /* fallback for old browsers */
+  background: linear-gradient(to bottom, #f6eee0, #e3caa5, #ceab93);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #243d25;
+}
+.form__div {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+.form__group {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: flex-start;
+  width: 70%;
+}
+.form__label {
+  font-family: "Comfortaa", cursive;
+  font-size: 1.3rem;
+  display: block;
+  transition: all 0.3s;
+  transform: translateY(0rem);
+  color: #826f66;
+}
+
+.form__input {
+  background: transparent;
+  border: none;
+  border-bottom: #ad8b73 2px solid;
+  color: #333;
+  font-size: 1.2rem;
+  padding: 0.7rem 0.4rem 0.7rem 0.4rem;
+  width: 100%;
+  transition: all 0.6s;
+}
+.form__input:focus {
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+}
+
+input:focus + label {
+  color: #6b4f4f;
+}
+.input__date {
+  background-color: transparent;
+  resize: none;
+  outline: none;
+  border: #826f66 2px solid;
+  font-family: "Comfortaa", cursive;
+  font-size: 1.3rem;
+  color: #826f66;
+  padding: 0.85rem 0.9rem;
+  margin-top: 0.5rem ;
+  margin-left: -0.5rem;
+}
+.dataAndCheckBoxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: "Comfortaa", cursive;
+  font-size: 1.3rem;
+  color: #826f66;
+}
+.input__payment {
+  margin-top: 1.3rem;
+  display: flex;
+  align-items: center;
+}
+.input__cashAndCard {
+  margin-left: 2rem;
+}
+ .input__card, .input__cash{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+.input__checkboxandLebel {
+  display: flex;
+  margin-top: 1.3rem;
+}
+.input__checkbox {
+  margin-left: 5.8rem;
+}
+.completeBtn {
+  font-family: "Comfortaa", cursive;
+  font-size: 2rem;
+  width: 400px;
+  height: 60px;
+  background-color: #e8d0b3;
+  background: linear-gradient(to top, #f6eee0, #e3caa5);
+  border: #85603f solid;
+  color: #85603f;
+  border-radius: 40px;
+}
+
+/* validation */
+
+.inputValidation + .spanValidation {
+  position: relative;
+}
+
+.inputValidation + .spanValidation::before {
+  position: absolute;
+  left: 400px;
+  top: 10px;
+}
+
+.inputValidation:invalid {
+  border: 2px solid red;
+}
+.inputValidation:invalid + .allLabels {
+  color: red;
+}
+
+.inputValidation:invalid + .spanValidation::before {
+  content: "✖";
+  color: red;
+}
+
+.inputValidation:valid + .spanValidation::before {
+  content: "✓";
+  color: green;
+}
+.page2{
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+}
