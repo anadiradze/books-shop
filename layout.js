@@ -136,7 +136,7 @@ const confirmOrderAnchor = createElement({
   tag: "a",
   classList: ["confirmOrderAnchor"],
   parent: confirmOrder,
-  href: "../confirmOrder.html",
+  href: "./confirmOrder.html",
   text: "Confirm Order",
 });
 const totalPriceDiv = createElement({
