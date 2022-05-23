@@ -169,7 +169,7 @@ function inForLoop() {
      let index= newPriceArr.indexOf(e.target.parentElement.parentElement.childNodes[2].textContent)
      newPriceArr.splice(index,1)
     }
-    totalPriceDiv.textContent = `Total Price: $${totalPrice}`;
+    totalPriceDiv.textContent = `Total Price: $${totalPrice=0}`;
   });
 }
 
