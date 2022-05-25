@@ -24,10 +24,11 @@ const form = document.getElementById("form");
 const formInputs = document.getElementsByClassName("allInputs");
 const formSpans = document.getElementsByClassName("form__span");
 for (let i = 0; i < formInputs.length; i++) {
+  formInputs[i].addEventListener("change", (e) => {
+    buttonUpdate();
+  });
   document.getElementById("completeBtn").addEventListener("click",()=>{
-    formInputs[i].addEventListener("onchange", () => {
-      buttonUpdate();
-    });
+   
     formInputs[i].classList.add("inputValidation");
     if(i<5){
       formSpans[i].classList.add("spanValidation");
@@ -51,5 +52,10 @@ for (let i = 0; i < formInputs.length; i++) {
 }
 function buttonUpdate() {
   document.getElementById("completeBtn").disabled = !form.checkValidity();
+  if(!form.checkValidity()){
+    document.getElementById("completeBtn").classList.add("disabledBtn")
+  }else{
+    document.getElementById("completeBtn").classList.remove("disabledBtn")
+  }
 }
 
