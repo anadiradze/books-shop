@@ -2,12 +2,15 @@ import createElement from "./createElement/createElement.js";
 let cartBoxDiv;
 
 /* SECTION 1 */
-const { body } = document;
+
+let fragment = new DocumentFragment();
+console.log(fragment.childNodes)
+const maincontainer = document.querySelector("#container")
 
 const Section1 = createElement({
   tag: "section",
   classList: ["section1"],
-  parent: body,
+  parent: fragment,
 });
 const header = createElement({
   tag: "header",
@@ -92,7 +95,7 @@ const section1Image = createElement({
 const section2 = createElement({
   tag: "section",
   classList: ["section2"],
-  parent: body,
+  parent: fragment,
 });
 const listBox = createElement({
   tag: "div",
@@ -145,7 +148,7 @@ const totalPriceDiv = createElement({
   parent: cartBoxDiv,
   text: "totalPrice",
 });
-
+maincontainer.appendChild(fragment)
 export {
   section2,
   listBox,
@@ -154,7 +157,6 @@ export {
   cartBoxDiv,
   listBoxH2,
   cartBoxH2,
-  body,
   totalPriceDiv,
   confirmOrderAnchor,confirmOrder
 };
