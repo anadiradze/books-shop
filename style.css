@@ -340,6 +340,16 @@ a {
   grid-auto-columns: auto;
   align-items: flex-start;
 }
+.cartBox{
+  width: 95%;
+  background-color: white;
+  margin: 20px 13px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
 
 /* IN CART */
 .CartDivTextinCart {

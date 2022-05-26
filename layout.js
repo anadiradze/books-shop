@@ -4,7 +4,6 @@ let cartBoxDiv;
 /* SECTION 1 */
 
 let fragment = new DocumentFragment();
-console.log(fragment.childNodes)
 const maincontainer = document.querySelector("#container")
 
 const Section1 = createElement({
@@ -104,7 +103,7 @@ const listBox = createElement({
 });
 const cartBox = createElement({
   tag: "div",
-  classList: ["box", "box2", "shadow2"],
+  classList: ["box", "box1", "shadow2"],
   parent: section2,
 });
 const listBoxDiv = createElement({
@@ -114,7 +113,7 @@ const listBoxDiv = createElement({
 });
 cartBoxDiv = createElement({
   tag: "div",
-  classList: ["cartBoxDiv"],
+  classList: ["cartBoxDiv","forDragAndDrop"],
   parent: cartBox,
   id: "div1",
 });

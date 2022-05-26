@@ -1,10 +1,6 @@
 import createElement from "./createElement/createElement.js";
 import { calledDataFunc } from "./data/data.js";
-import {
-  listBoxDiv,
-  cartBoxDiv,
-  totalPriceDiv,
-} from "./layout.js";
+import { listBoxDiv, cartBoxDiv, totalPriceDiv } from "./layout.js";
 let showMore;
 let bookDiv;
 let addToBag;
@@ -34,9 +30,10 @@ function inForLoop() {
   for (let i = 0; i < authorsArr.length; i++) {
     bookDiv = createElement({
       tag: "div",
-      classList: ["bookDiv"],
+      classList: ["bookDiv", "list_item"],
       parent: listBoxDiv,
       id: `${i}`,
+      draggable: "true",
     });
     const imageLink = createElement({
       tag: "img",
@@ -147,31 +144,94 @@ function inForLoop() {
       const addToBagS2HTMLCollection =
         document.getElementsByClassName("addToBagS2");
       newPriceArr.push(priceArr[i]);
-      console.log("damatebis dros",newPriceArr)
       reducer(newPriceArr);
       totalPriceDiv.textContent = `Total Price: $${totalPrice}`;
     });
-  }
-  
-  function reducer(ArrayOfPrices) {
-    let initialValue = 0;
-    totalPrice = ArrayOfPrices.reduce(
-      (previousValue, currentValue) => previousValue + currentValue,
-      initialValue
-    );
-  }
+    // DRAG AND DROP
+    const list_item = document.getElementsByClassName("list_item")[i];
 
-  const container = document.querySelector(".cartBoxDiv");
-  container.addEventListener("click", function (e) {
-    if (e.target.classList.contains("addToBagS2")) {
-      totalPrice = totalPrice - e.target.parentElement.parentElement.childNodes[2].textContent;
-      e.target.parentElement.parentElement.remove();
-     let index= newPriceArr.indexOf(e.target.parentElement.parentElement.childNodes[2].textContent)
-     newPriceArr.splice(index,1)
-     totalPriceDiv.textContent = `Total Price: $${totalPrice}`;
-    }
-  });
+    let draggedItem = "";
+
+    list_item.addEventListener("dragstart", () => {
+
+    });
+    list_item.addEventListener("dragend", () => {
+      const CartDivTextS2 = createElement({
+        tag: "div",
+        classList: ["CartDivTextinCart"],
+        parent: cartBoxDiv,
+        id: `${i}`,
+      });
+      const listBoxH5S2 = createElement({
+        tag: "h5",
+        classList: ["h5Authors"],
+        parent: CartDivTextS2,
+        text: authorsArr[i],
+      });
+      const listBoxH3S2 = createElement({
+        tag: "h3",
+        classList: ["Section2H3"],
+        parent: CartDivTextS2,
+        text: titleArr[i],
+      });
+      const listBoxH4S2 = createElement({
+        tag: "h4",
+        classList: ["bookDivH4"],
+        parent: CartDivTextS2,
+        text: priceArr[i],
+      });
+      const buttonAndAmount = createElement({
+        tag: "div",
+        classList: ["buttonAndAmount"],
+        parent: CartDivTextS2,
+      });
+      const addToBagS2 = createElement({
+        tag: "button",
+        classList: ["addToBagS2"],
+        parent: buttonAndAmount,
+        text: "Remove",
+      });
+      const addToBagS2HTMLCollection =
+        document.getElementsByClassName("addToBagS2");
+      newPriceArr.push(priceArr[i]);
+      reducer(newPriceArr);
+      totalPriceDiv.textContent = `Total Price: $${totalPrice}`;
+    });
+
+    cartBoxDiv.addEventListener("dragover", (e) => {
+      e.preventDefault();
+    });
+    cartBoxDiv.addEventListener("dragenter", (e) => {
+      e.preventDefault();
+    });
+    cartBoxDiv.addEventListener("drop", () => {
+      cartBoxDiv.append(draggedItem);
+    });
+  }
 }
+
+function reducer(ArrayOfPrices) {
+  let initialValue = 0;
+  totalPrice = ArrayOfPrices.reduce(
+    (previousValue, currentValue) => previousValue + currentValue,
+    initialValue
+  );
+}
+
+const container = document.querySelector(".cartBoxDiv");
+container.addEventListener("click", function (e) {
+  if (e.target.classList.contains("addToBagS2")) {
+    totalPrice =
+      totalPrice -
+      e.target.parentElement.parentElement.childNodes[2].textContent;
+    e.target.parentElement.parentElement.remove();
+    let index = newPriceArr.indexOf(
+      e.target.parentElement.parentElement.childNodes[2].textContent
+    );
+    newPriceArr.splice(index, 1);
+    totalPriceDiv.textContent = `Total Price: $${totalPrice}`;
+  }
+});
 
 export {
   bookDiv,
