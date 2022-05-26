@@ -152,9 +152,6 @@ function inForLoop() {
 
     let draggedItem = "";
 
-    list_item.addEventListener("dragstart", () => {
-
-    });
     list_item.addEventListener("dragend", () => {
       const CartDivTextS2 = createElement({
         tag: "div",
@@ -198,15 +195,6 @@ function inForLoop() {
       totalPriceDiv.textContent = `Total Price: $${totalPrice}`;
     });
 
-    cartBoxDiv.addEventListener("dragover", (e) => {
-      e.preventDefault();
-    });
-    cartBoxDiv.addEventListener("dragenter", (e) => {
-      e.preventDefault();
-    });
-    cartBoxDiv.addEventListener("drop", () => {
-      cartBoxDiv.append(draggedItem);
-    });
   }
 }
 
