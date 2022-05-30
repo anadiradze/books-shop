@@ -26,13 +26,12 @@ const formSpans = document.getElementsByClassName("form__span");
 for (let i = 0; i < formInputs.length; i++) {
   formInputs[i].addEventListener("change", (e) => {
     buttonUpdate();
-  });
-  document.getElementById("completeBtn").addEventListener("click",()=>{
-   
     formInputs[i].classList.add("inputValidation");
     if(i<5){
       formSpans[i].classList.add("spanValidation");
     }
+  });
+  document.getElementById("completeBtn").addEventListener("click",()=>{
     function passvalue(){
       const street = document.getElementById("street").value
       const house = document.getElementById("house").value
