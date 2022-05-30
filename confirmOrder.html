@@ -17,6 +17,7 @@
           minlength="4"
           name="fname"
           class="form__input allInputs "
+          placeholder="min 4 characters"
           required
         />
         <span class="form__span"></span>
@@ -31,6 +32,7 @@
           name="lname"
           class="form__input allInputs "
           id=""
+          placeholder="min 4 characters"
           required
         />
         <span class="form__span"></span>
@@ -43,17 +45,18 @@
           minlength="5"
           class="form__input allInputs "
           required
+          placeholder="min 5 characters"
         />
         <span class="form__span"></span>
         <label for="street" class="form__label allLabels">Street*</label>
       </div>
       <div class="form__group">
-        <input type="number" min="0" id="house" class="form__input allInputs " required />
+        <input type="number" min="0" id="house" class="form__input allInputs " " placeholder="Positive nums only"   required />
         <span class="form__span"></span>
         <label for="house" class="form__label allLabels">House number*</label>
       </div>
       <div class="form__group">
-        <input  min="0" id="flat" class="form__input allInputs " pattern=^[0-9]+(-[0-9]+)*?$  required />
+        <input  min="0" id="flat" class="form__input allInputs " pattern=^[0-9]+(-[0-9]+)*?$  placeholder="Positive nums only, dash is allowed"  required />
         <span class="form__span"></span>
         <label for="flat" class="form__label allLabels">flat number*</label>
       </div>
