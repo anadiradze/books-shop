@@ -136,8 +136,11 @@ input:focus + label {
 }
 
 .inputValidation:invalid + .spanValidation::before {
-  content: "✖";
+  content: "The field is invalid";
   color: red;
+  padding-left: 50px;
+  margin-top: 5px;
+  width: 133px;
 }
 
 .inputValidation:valid + .spanValidation::before {
